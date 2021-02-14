@@ -1,0 +1,65 @@
+@import 'variables.css'
+@import 'reset.css'
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: var(--body);
+		font-weight: var(--bWeight);
+    color: var(--black);
+    background: var(--white);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: var(--head); font-weight: var(--headWeight);}
+a {text-decoration: none; color:var(--primary);}
+a:hover {text-decoration: underline;}
+p {max-width: 90vw; line-height: 1.6; margin: 1rem 0;}
+
+button {
+    padding: var(--btnpadding);
+    border: var(--btnborder);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: .4s ease;
+    color: inherit;
+}
+button:hover {background: var(--secondary);}
+.container {
+    width: 100vw;
+    min-height: 82.2vh;
+    display: grid;
+    place-items: center;
+}
+.content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+.title {
+    text-align: center;
+    margin: 2rem;
+}
+.cta {
+    min-height: 20vh!important;
+    background: var(--success);
+}
+@media(prefers-color-scheme: dark) {
+    html, body {
+        color: var(--white);
+        background: var(--black);
+    }
+		p {max-width: 60vw;}
+}
+@media(min-width: 1360px) {
+    html, body {
+        font-size: 20px;
+    }
+}
+@media(min-width: 1919px) {
+    html, body {
+        font-size: 24px;
+    }
+}

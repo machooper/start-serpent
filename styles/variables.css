@@ -1,0 +1,28 @@
+
+:root {
+	/*colors*/
+	--primary: #0099ff;
+	--secondary: #ff6600;
+	--tertiary: #e30796;
+	--quaternary: #a2f48e;
+	--black: #1c1c1c;
+	--white: #e6e6e6;
+	--grey: #d3d3d3;
+	--darkgrey: #a9a9a9;
+	--shade: rgba('0,0,0,.3');
+	--warn: #fddc5c;
+	--error: #ff073a;
+	--success: #56fca2;
+	/*typography*/
+	--head: 'Roboto', monospace;
+	--hWeight: 700;
+	--body: 'Anonymous Pro', monospace;
+	--bWeight: 400;
+	--size: 16px;
+	--line-height: 1.6;
+	/*other*/
+	--btnpadding: .35rem 1.2rem;
+	--btnborder: .1rem solid var(--black);
+	--radius: .12rem;
+	--shadow: 1.5px 3px 6px var(--shade);
+}
