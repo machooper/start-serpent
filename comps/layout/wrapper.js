@@ -14,3 +14,4 @@ export default function Wrapper({children}) {
 			}
 			`}</style>
 		</>
+)}

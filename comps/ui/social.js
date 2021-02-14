@@ -5,11 +5,11 @@ export default function Social() {
 		<>
 			<ul>
 				{config.social.map((icon) => (
-					<li>
-						<Link href={`https://${name}.com/${user}`}/>
+					<Link href={`https://${icon.name}.com/${icon.user}`}>
+						<li key={icon.name}>
 							<img src={`/social/${icon.name.toLowerCase()}.svg`} alt={icon.name}/>
-						</Link>
-					</li>
+						</li>
+					</Link>
 				))}
 			</ul>
 			
@@ -22,4 +22,5 @@ export default function Social() {
 				margin: 5px;
 			}
 			`}</style>
-
+	</>
+)}

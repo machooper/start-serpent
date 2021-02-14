@@ -1,6 +1,6 @@
-import Document, {HTML, Head, Main, NextScript} from 'next/document'
-
-classMyDocument extends Document {
+import Document, {Html, Head, Main, NextScript} from 'next/document'
+import config from '../config'
+class MyDocument extends Document {
 	static async getinitialProps(ctx) {
 		const initalProps = await Document.getInitialProps(ctx)
 		return {...initialProps}

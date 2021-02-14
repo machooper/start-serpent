@@ -1,5 +1,5 @@
-@import 'variables.css'
-@import 'reset.css'
+@import 'variables.css';
+@import 'reset.css';
 
 html, body {
     width: 100vw;
@@ -13,7 +13,7 @@ html, body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {font-family: var(--head); font-weight: var(--headWeight);}
+h1, h2, h3, h4, h5, h6 {font-family: var(--head); font-weight: var(--hWeight);}
 a {text-decoration: none; color:var(--primary);}
 a:hover {text-decoration: underline;}
 p {max-width: 90vw; line-height: 1.6; margin: 1rem 0;}
@@ -51,7 +51,9 @@ button:hover {background: var(--secondary);}
         color: var(--white);
         background: var(--black);
     }
-		p {max-width: 60vw;}
+		h1, h2, h3, h4, h5, h6 {color: var(--white);}
+		p {max-width: 60vw; color: var(--white);}
+		
 }
 @media(min-width: 1360px) {
     html, body {

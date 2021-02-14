@@ -8,12 +8,12 @@ export default function Banner() {
 	return (
 		<>
 			<div>
-				<p{config.banner.message}</p>
+				<p>{config.banner.message}</p>
 				<a onClick={closeBanner}>&times;</a>
 			</div>
 		
 		<style jsx>{`
-		background: ${util.banner.color};
+		background: ${config.banner.color};
 		display: ${banner ? 'grid' : 'none'}
 		a {color: inherit;}
 		a:hover {border-bottom: none; color: inherit;}
@@ -34,4 +34,5 @@ export default function Banner() {
 			100% {height: 30px;opacity:1;}
 		}
 		`}</style>
+	</>
 )}

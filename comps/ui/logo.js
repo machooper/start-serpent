@@ -3,7 +3,7 @@ import config from '../../config'
 export default function Logo({url}) {
 	return (
 		<>
-			<Link href={url}/><h1>{config.title}</h1></Link>
+			<Link href={url}><h1>{config.title}</h1></Link>
 			
 			<style jsx>{`
 			div {

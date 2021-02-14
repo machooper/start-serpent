@@ -14,7 +14,7 @@ export default {
 		tertiary: '#004db80',
 		quaternary: '#a2f48e',
 		black: '#1c1c1c',
-		white: '#fffff',
+		white: '#fff',
 		grey: '#eaeaea',
 		shade: 'rgba(0,0,0,.3)',
 		warn: '#fddc5c',
@@ -36,7 +36,7 @@ export default {
 	other: {
 		shadow: '1,5px 3px 6px var(--shade)',
 		radius: '.6rem'
-	}
+	},
 	navigation: ['home', 'example'],
 	banner: {
 		visisble: false,
