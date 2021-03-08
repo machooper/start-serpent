@@ -26,3 +26,6 @@ export default function Post({
 				alt={`${author} Profile Image`}
 			/>
 			<h3>{author}</h3>
+		</div>
+	)
+}

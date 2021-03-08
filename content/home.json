@@ -1,24 +1,4 @@
 {
-<<<<<<< HEAD
 	"title": "Index Page",
-	"subheading": "Content goes here"
-=======
-	"hero-text": "The hero text goes here",
-	"hero-button": "Click Here",
-	"hero-url": "/about",
-	"services": {
-		"title": "See What We Can Offer!",
-		"text1": "Designs that you will love",
-		"image1": "/images/index/design.webp",
-		"text2": "Perfectly developed just for you",
-		"image2": "/images/index/develop.webp"
-	},
-	"testimonials": {
-		"title": "Don't Take Our Word For It...",
-		"test1": "Lorem ipsum dolor sit amet",
-		"author1": "Company Name | Date",
-		"test2": "Lorem ipsum dolor sit amet",
-		"author2": "Company Name | Date"
-	}
->>>>>>> d64de1dfb996f297480fa2759378be18d64d1b47
+	"subheading": "Sub goes here"
 }
