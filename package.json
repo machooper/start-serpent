@@ -1,6 +1,11 @@
 {
 	"name": "next-starter",
+<<<<<<< HEAD
 	"author": "Mac Hooper",
+=======
+	"version": "1.1.1",
+	"description": "A NextJS starter to help you hit the ground running",
+>>>>>>> d64de1dfb996f297480fa2759378be18d64d1b47
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -9,7 +14,11 @@
 	"dependencies": {
 		"next": "latest",
 		"react": "latest",
+<<<<<<< HEAD
 		"react-dom": "latest",
 		"nodemailer": "latest"
+=======
+		"reac-dom": "latest"
+>>>>>>> d64de1dfb996f297480fa2759378be18d64d1b47
 	}
 }

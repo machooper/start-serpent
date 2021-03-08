@@ -1,4 +1,5 @@
 import Link from 'next/link'
+<<<<<<< HEAD
 export default function Button({ghost, text, url, bg, hov}) {
 	return (
 		<>
@@ -13,3 +14,19 @@ export default function Button({ghost, text, url, bg, hov}) {
 			`}</style>
 		</>
 )}
+=======
+
+export default function Button({url, text, variant}) {
+	if (variant == "primary") {
+		return (
+			<Link href={`/${url}`}>
+				<button className="btn-primary">{text}</button>
+			</Link>
+		)} else {
+			return (
+				<Link href={`/${url}`}>
+					<button>{text}</button>
+				</Link>
+			)
+}
+>>>>>>> d64de1dfb996f297480fa2759378be18d64d1b47
