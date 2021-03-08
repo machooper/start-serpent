@@ -27,5 +27,4 @@ export default function Post({
 			/>
 			<h3>{author}</h3>
 		</div>
-	)
-}
+)}

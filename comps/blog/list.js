@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Post from './post'
 
 export default function PostList({posts}) {
