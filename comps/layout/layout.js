@@ -1,29 +1,16 @@
-import Header from './header/header'
+import Head from './head'
+import Wrapper from './wrapper'
+import Header from './header'
+import Content from './content'
 import Footer from './footer'
-
-export default funciton Layout({title, description, children}) {
-	return (
-		<>
-			<div className="wrapper">
-				<Header/>
-					<div className="content">
-						{children}
-					</div>
-				<Footer/>
-			</div>
-
-			<style jsx>{`
-				.wrapper {
-					min-height: 100vh;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					margin-top: 100px;
-				}
-				.content {
-					flex: 1 0 auto;
-					margin: 0 auto;
-				}
-			`}</style>
-		</>
-	)}
+export default function Layout({title, description, children}) {
+  return (
+    <>
+      <Head title={title} description={description}/>
+        <Wrapper>
+          <Header/>
+            <Content content={children}/>
+          <Footer/>
+        </Wrapper>
+    </>
+)}
