@@ -3,7 +3,7 @@ import Date from './date'
 
 export default function Post({
 	title,
-	coverImage,
+	image,
 	date,
 	excerpt,
 	author,
@@ -11,7 +11,7 @@ export default function Post({
 }) {
 	return (
 		<div>
-			<img src={coverImage} alt={title}/>
+			<img src={image} alt={title}/>
 			<h3>
 				<Link as={`/posts/${slug}`} href="/posts/[slug]">
 					<a>{title}</a>
