@@ -1,7 +1,7 @@
 ---
 id: 01
 title: 'Lorem Ipsum'
-coverImage: '/blog/about.webp'
+image: '/blog/about.webp'
 date: '2021-02-01T05:35:07.322Z'
 author:
   name: Author Name

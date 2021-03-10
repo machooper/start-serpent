@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-node_modules
-.next
-.env
-.DS_STORE
-.swp
-.swo
-=======
 # Logs
 logs
 *.log
@@ -54,4 +46,3 @@ node_modules/
 
 # DS_Store
 .DS_Store
->>>>>>> d64de1dfb996f297480fa2759378be18d64d1b47

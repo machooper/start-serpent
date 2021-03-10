@@ -7,7 +7,7 @@ class MyDocument extends Document {
 	}
 	render() {
 		return (
-			<Html lang={config.lang}>
+			<Html lang={config.language}>
 				<Head/>
 				<body>
 					<Main/>

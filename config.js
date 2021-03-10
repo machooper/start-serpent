@@ -2,6 +2,7 @@ export default {
 	title: 'Next Starter',
 	author: 'Mac Hooper',
 	description: 'Websites SEO description goes in this section',
+	language: 'en',
 	social: [
 		{name: 'Twitter', user: 'Mac_Hooper'},
 		{name: 'Facebook', user: 'mac.hooper'},

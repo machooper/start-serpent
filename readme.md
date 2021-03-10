@@ -16,11 +16,10 @@ A Next.js starter template for creating web applications efficiently
 - Barebones containing only regularly needed features
 - Basic Layout components ready to be styled
 - Config file with variables for site theming, metadata, navigation and social links
-- A basic post/content CMS built in
+- A basic post/content CMS built in using json and md files to store content
 
 ## Tools
-- React
-- Next.js
+- [Next.js](nextjs.org)
 
 ## Credits
 Created by [Adapt Studio](https://adaptstudio.co.uk) 

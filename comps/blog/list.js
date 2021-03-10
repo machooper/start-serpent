@@ -1,19 +1,34 @@
 import Link from 'next/link'
-import Post from './post'
 
 export default function PostList({posts}) {
 	return (
-		<div>
-			{posts.map((post) => (
-				<Post
-					key={post.slug}
-					title={post.title}
-					coverImage={post.coverImage}
-					date={post.date}
-					author={post.author}
-					slug={post.slug}
-					excerpt={post.excerpt}
-				/>
-			))}
-		</div>
-	)}
+		<>
+			{posts.map((post, index) => {
+				return (
+				<div key={post.id} className="post">
+					<div>
+						<img src={post.image} alt={post.title}/>
+						<h3>
+							<Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+								<a>{post.title}</a>
+							</Link>
+						</h3>
+					</div>
+					<p>{post.excerpt}</p>
+				</div>
+			)})}
+
+			<style jsx>{`
+			.post {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.post img {
+				width: 100px;
+				height: 100px;
+			}
+			`}</style>
+		</>
+)}
