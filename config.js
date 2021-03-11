@@ -38,7 +38,7 @@ export default {
 		shadow: '1,5px 3px 6px var(--shade)',
 		radius: '.6rem'
 	},
-	navigation: ['home', 'example'],
+	navigation: ['home', 'about', 'blog', 'contact'],
 	banner: {
 		visisble: false,
 		message: 'A test message for the banner',

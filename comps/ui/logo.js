@@ -10,6 +10,9 @@ export default function Logo({url}) {
 				display: flex;
 				align-items: center;
 			}
+			h1, img {
+				cursor: pointer;
+			}
 			img {
 				width: 30px;
 				height: 30px;
