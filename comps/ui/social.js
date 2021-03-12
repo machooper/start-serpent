@@ -3,23 +3,45 @@ import config from '../../config'
 export default function Social() {
 	return (
 		<>
-			<ul>
+			<ul id="light">
 				{config.social.map((icon) => (
 					<Link href={`https://${icon.name}.com/${icon.user}`}>
 						<li key={icon.name}>
-							<img src={`/social/${icon.name.toLowerCase()}.svg`} alt={icon.name}/>
+							<img src={`/icons/light/social/${icon.name.toLowerCase()}.png`} alt={icon.name}/>
 						</li>
 					</Link>
 				))}
 			</ul>
 			
+			<ul id="dark">
+				{config.social.map((icon) => (
+					<Link href={`https://${icon.name}.com/${icon.user}`}>
+						<li key={icon.name}>
+							<img id={icon.name} src={`/icons/dark/social/${icon.name.toLowerCase()}.png`} alt={icon.name}/>
+						</li>
+					</Link>
+				))}
+			</ul>
+
 			<style jsx>{`
 			ul {
-				display: flex;
 				align-items: center;
 			}
 			li {
 				margin: 5px;
+				padding: 0 .6rem;
+			}
+			img {
+				width: 40px;
+			}
+			#Facebook {
+				width: 20px
+			}
+			#light {display: flex;}
+			#dark {display: none;}
+			@media(prefers-color-scheme: dark) {
+				#dark {display: flex;}
+				#light {display: none;}
 			}
 			`}</style>
 	</>

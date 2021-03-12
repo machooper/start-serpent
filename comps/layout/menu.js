@@ -63,11 +63,14 @@ export default function Menu() {
         ul {
           display: flex;
           flex-direction: column;
+          text-align: center;
+        }
+        ul li {
+          padding: 1rem 0;
         }
         ul li a {
           color: inherit;
 	        font-size: 1.8rem;
-          padding-bottom: 20px;
         }
         svg rect {
           fill: var(--black);

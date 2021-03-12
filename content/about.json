@@ -1,4 +1,6 @@
 {
-	"title": "About Page",
-	"subheading": "Learn more here"
+	"title": "About",
+	"img": "/images/about.png",
+	"imgalt": "A guitarasts pedal board",
+	"subheading": "Star Serpent Records is a record label based in Southampton looking to support new talent."
 }

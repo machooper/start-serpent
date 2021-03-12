@@ -4,10 +4,10 @@ export default {
 	description: 'An upcoming record label based in Southampton, UK',
 	language: 'en',
 	social: [
-		{name: 'Twitter', user: 'unk'},
-		{name: 'Facebook', user: 'unk'},
 		{name: 'Instagram', user: 'unk'},
-		{name: 'GitHub', user: 'unl'}
+		{name: 'Facebook', user: 'unk'},
+		{name: 'Soundcloud', user: 'unk'},
+		{name: 'YouTube', user: 'unl'}
 	],
 	colors: {
 		primary: '#0099ff',

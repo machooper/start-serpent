@@ -1,4 +1,5 @@
 import content from '../../content/home.json'
+import Title from '../ui/title'
 import Button from '../ui/button'
 export default function Hero() {
 	return (
@@ -17,6 +18,12 @@ export default function Hero() {
 					display: flex;
 					justify-content: center;
 					padding-bottom: 10rem;
+				}
+				.content {
+					text-align: center;
+				}
+				p {
+					margin: 2rem 0;
 				}
 			`}</style>
 		</>
