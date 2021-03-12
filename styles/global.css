@@ -19,6 +19,7 @@ a:hover {text-decoration: underline;}
 p {max-width: 90vw; line-height: 1.6; margin: 1rem 0;}
 
 button {
+    font-size: inherit;
     padding: var(--btnpadding);
     border: var(--btnborder);
     border-radius: var(--radius);

@@ -7,7 +7,7 @@ export default function Button({ghost, text, url, bg, hov}) {
 			<style jsx>{`
 			button {
 				background: ${ghost ?	 'transparent' : 'var(--primary)'};
-				max-width: 100px;
+				max-width: 1j0px;
 				border: 1px solid ${ghost ? 'var(--grey)': 'none'};		
 				box-shadow: none;
 				color: inherit;

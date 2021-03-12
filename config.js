@@ -1,13 +1,13 @@
 export default {
-	title: 'Next Starter',
+	title: 'Star Serpent Records',
 	author: 'Mac Hooper',
-	description: 'Websites SEO description goes in this section',
+	description: 'An upcoming record label based in Southampton, UK',
 	language: 'en',
 	social: [
-		{name: 'Twitter', user: 'Mac_Hooper'},
-		{name: 'Facebook', user: 'mac.hooper'},
-		{name: 'Instagram', user: 'machooper'},
-		{name: 'GitHub', user: 'machooper'}
+		{name: 'Twitter', user: 'unk'},
+		{name: 'Facebook', user: 'unk'},
+		{name: 'Instagram', user: 'unk'},
+		{name: 'GitHub', user: 'unl'}
 	],
 	colors: {
 		primary: '#0099ff',
@@ -31,14 +31,14 @@ export default {
 		lHeight: '1.6'
 	},
 	buttons: {
-		padding: '.8rem 1.8rem',
+		padding: '.8rem 1.4rem',
 		border: '1px solid var(--black)'
 	},
 	other: {
 		shadow: '1,5px 3px 6px var(--shade)',
-		radius: '.6rem'
+		radius: '0'
 	},
-	navigation: ['home', 'about', 'blog', 'contact'],
+	navigation: ['about', 'artists', 'contact'],
 	banner: {
 		visisble: false,
 		message: 'A test message for the banner',

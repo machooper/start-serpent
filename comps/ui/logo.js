@@ -3,7 +3,15 @@ import config from '../../config'
 export default function Logo({url}) {
 	return (
 		<>
-			<Link href={url}><h1>{config.title}</h1></Link>
+			<Link href={url}>
+				<picture>
+			  		<source 
+				    		srcSet="/icons/dark/logo.png" 
+				    		media="(prefers-color-scheme: dark)"
+					/>
+  					<img src="/icons/light/logo.png" alt={config.title}/>
+				</picture>	
+			</Link>
 			
 			<style jsx>{`
 			div {
@@ -14,10 +22,16 @@ export default function Logo({url}) {
 				cursor: pointer;
 			}
 			img {
-				width: 30px;
-				height: 30px;
+				width: 80px;
+				height: 80px;
 				object-fit: cover;
 				margin: 0 .5rem 0 0;
+			}
+			@media(min-width: 760px) {
+				img {
+					width: 120px;
+					height: 120px;
+				}
 			}
 			`}</style>
 		</>

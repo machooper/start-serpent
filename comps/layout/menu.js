@@ -23,7 +23,7 @@ export default function Menu() {
           {config.navigation.map((link) => (
             <li key={link}>
               <Link href={link}>
-                <a onClick={menuToggle}>{link}</a>
+                <a onClick={menuToggle}>{link.charAt(0).toUpperCase() + link.slice(1)}</a>
               </Link>
             </li>
           ))}
@@ -65,7 +65,7 @@ export default function Menu() {
           flex-direction: column;
         }
         ul li a {
-	        color: var(--white);
+          color: inherit;
 	        font-size: 1.8rem;
           padding-bottom: 20px;
         }
@@ -78,8 +78,21 @@ export default function Menu() {
 		}
 	}
         @media(min-width: 1360px) {
-          #menu {width: 30vw;}
-	  #menubtn {padding: 1rem 0;}
+          #menu {
+            width: 500px;
+            min-height: auto;
+            transform: translate(0);
+            background: transparent;
+            position: relative;
+          }
+          ul {
+            flex-direction: row;
+          }
+          ul li a {
+            padding: 0 1rem;
+          }
+          #menubtn {padding: 1rem 0; display: none;}
+          #close {display: none;}
         }
       `}</style>
     </>
