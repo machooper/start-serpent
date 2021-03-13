@@ -26,7 +26,7 @@ export default {
 		head: '\'Montserrat\', sans-serif',
 		hWeight: 'bold',
 		body: '\'Montserrat\', sans-serif',
-		bodyWeight: 'medium',
+		bWeight: 'medium',
 		size: '25px',
 		lHeight: '30px'
 	},
