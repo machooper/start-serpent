@@ -4,8 +4,9 @@ import {getAllPosts} from '../lib/posts'
 import PostList from '../comps/artists/list'
 
 export default function Blog({allPosts}) {
+  console.log(allPosts)
   return (
-    <Layout title="Blog" description="Blog page">
+    <Layout title="Artists" description="A collection of artists managed by Star Serpent Records">
       <PostList posts={allPosts}/>
     </Layout>
 )}
@@ -16,6 +17,7 @@ export async function getStaticProps() {
     'title',
     'image',
     'slug',
+    'releases',
     'url'
   ])
   return {

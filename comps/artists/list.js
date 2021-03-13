@@ -28,6 +28,13 @@ export default function PostList({posts}) {
 				height: 400px;
 				background: grey;
 				position: relative;
+				cursor: pointer;
+				transition: .3s ease;
+				margin: 1rem 0;
+			}
+			.post:hover {
+				transform: translate(10px, -10px) scale(1.04);
+				transition: .3s ease;
 			}
 			.post img {
 				position: absolute;
