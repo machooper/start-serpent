@@ -4,18 +4,18 @@ export default {
 	description: 'An upcoming record label based in Southampton, UK',
 	language: 'en',
 	social: [
-		{name: 'Instagram', user: 'unk'},
-		{name: 'Facebook', user: 'unk'},
-		{name: 'Soundcloud', user: 'unk'},
-		{name: 'YouTube', user: 'unl'}
+		{name: 'Instagram', user: 'https://www.instagram.com/starserpentrecords/?hl=en-gb'},
+		{name: 'Facebook', user: 'https://www.facebook.com/StarSerpentRecords/'},
+		{name: 'Soundcloud', user: 'https://soundcloud.com/star-serpent-records'},
+		{name: 'YouTube', user: 'https://www.youtube.com/channel/UCe1HpaBzZHVZU0MVoyDNTxw'}
 	],
 	colors: {
-		primary: '#0099ff',
-		secondary: '#006bb3',
+		primary: '#49B875',
+		secondary: '#65ccb8',
 		tertiary: '#004db80',
 		quaternary: '#a2f48e',
-		black: '#1c1c1c',
-		white: '#fff',
+		black: '#182628',
+		white: '#f2f2f2',
 		grey: '#eaeaea',
 		shade: 'rgba(0,0,0,.3)',
 		warn: '#fddc5c',
@@ -23,11 +23,11 @@ export default {
 		success: '#56fca2'
 	}, 
 	typography: {
-		head: '\'Maven Pro\', mmonospace',
+		head: '\'Montserrat\', monospace',
 		hWeight: '700',
 		body: '\'Montserrat\', sans-serif',
 		bodyWeight: '400',
-		size: '16px',
+		size: '40px',
 		lHeight: '1.6'
 	},
 	buttons: {
