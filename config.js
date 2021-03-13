@@ -12,8 +12,8 @@ export default {
 	colors: {
 		primary: '#49B875',
 		secondary: '#65ccb8',
-		tertiary: '#004db80',
-		quaternary: '#a2f48e',
+		tertiary: '#57BA98',
+		quaternary: '#131C1D',
 		black: '#182628',
 		white: '#f2f2f2',
 		grey: '#eaeaea',
@@ -23,12 +23,12 @@ export default {
 		success: '#56fca2'
 	}, 
 	typography: {
-		head: '\'Montserrat\', monospace',
-		hWeight: '700',
+		head: '\'Montserrat\', sans-serif',
+		hWeight: 'bold',
 		body: '\'Montserrat\', sans-serif',
-		bodyWeight: '400',
-		size: '40px',
-		lHeight: '1.6'
+		bodyWeight: 'medium',
+		size: '25px',
+		lHeight: '30px'
 	},
 	buttons: {
 		padding: '.8rem 1.4rem',
