@@ -30,6 +30,7 @@ export default function Social() {
 			li {
 				margin: 5px;
 				padding: 0 .6rem;
+				cursor: pointer;
 			}
 			img {
 				width: 40px;

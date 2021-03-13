@@ -12,6 +12,7 @@ export default function Mailing() {
 				<input type="text" name="name"/>
 				<label>E-Mail Address</label>
 				<input type="email" name="email"/>
+				<button type="submit">Submit</button>
 			</form>
 
 			<style jsx>{`
@@ -36,6 +37,14 @@ export default function Mailing() {
 				form input {
 					background: transparent;
 					border: 1px solid var(--white);
+				}
+				button {
+					background: var(--secondary);
+					color: var(--black);
+					padding: var(--btnpadding);
+					min-width: 150px;
+					margin: 2rem auto;
+				}
 			`}</style>
 		</>
 )}

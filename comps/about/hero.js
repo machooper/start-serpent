@@ -5,7 +5,7 @@ export default function Hero() {
 			<div className="hero">
 				<h1>{content.title}</h1>
 				<img src={content.img} alt={content.imgalt}/>
-				<span>{content.subheading}</span>
+				<p>{content.subheading}</p>
 			</div>
 
 			<style jsx>{`
@@ -19,6 +19,14 @@ export default function Hero() {
 				img {
 					width: 100vw;
 					margin: 1rem 0;
+				}
+				p {
+					display: none;
+				}
+				@media(min-width: 760px) {
+					p {
+						display: block;
+					}
 				}
 			`}</style>
 		</>

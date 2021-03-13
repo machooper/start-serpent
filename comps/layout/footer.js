@@ -15,7 +15,7 @@ export default function Footer() {
          display: flex;
          flex-direction: column;
          align-items: center;
-         background: var(--secondary);
+         background: var(--quaternary);
          padding: 2rem 0 .5rem 0;
       }
       @media(min-width: 760px) {
@@ -23,7 +23,7 @@ export default function Footer() {
          justify-content: space-between;
          align-items: center;
          flex-shrink: 0;
-         padding: 0 1rem .5rem 1rem;
+         padding: 2rem 1rem .5rem 1rem;
          margin: 2rem 0 0 0;
         }
       }

@@ -10,9 +10,9 @@ export default function About() {
 			<Hero/>
 			<div className="container">
 				<div className="text">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus odio, mollis eget volutpat quis, ultrices nec felis. Integer consectetur lacus quam. Cras purus lectus, rutrum a arcu at, blandit volutpat leo. Curabitur ut nibh a massa sagittis varius. Donec pretium convallis volutpat. Curabitur ut efficitur lectus. Quisque nisl sapien, cursus sed viverra a, luctus ac ex. Fusce lacinia aliquet volutpat. Donec lobortis dignissim lacinia.</p>
-	
-					<p>Aliquam dignissim feugiat nisi, vel mattis arcu blandit et. Curabitur in interdum turpis. Curabitur pretium gravida vulputate. Praesent id libero eu tellus sodales maximus. Nunc a dictum erat. In volutpat hendrerit est vitae scelerisque. Suspendisse sed sem viverra, dapibus enim eget, pulvinar ligula.</p>
+					<b>{content.subheading}</b>
+					<p>{content.par1}</p>
+					<p>{content.par2}</p>
 				</div>
 
 				<Social/>
@@ -26,9 +26,18 @@ export default function About() {
 					flex-direction: column;
 					justify-content: space-between;
 					padding-bottom: 1rem;
+					margin-top: -1rem;
+				}
+				.text {
+					max-width: 90vw;
 				}
 				p {
 					text-align: left;
+				}
+				@media(min-width: 760px) {
+					b {
+						display: none;
+					}
 				}
 			`}</style>
 		</Layout>

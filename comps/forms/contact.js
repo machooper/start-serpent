@@ -36,37 +36,37 @@ export default function ContactForm() {
   return (
   <>
     <form>
+        <label for="name">Full Name</label>
         <input
           id="name"
           name="name"
           type="text"
           className="fe"
-          placeholder="Name"
           value={form.name}
           onChange={handleChange}
           required
         />
+        <label for="E-Mail Address">E-Mail Address</label>
         <input
           id="email"
           name="email"
           type="email"
           className="fe"
-          placeholder="Email"
           value={form.email}
           onChange={handleChange}
           required
         />
+        <label for="Message">Message</label>
         <textarea
           id="message"
           name="message"
           className="fe"
-          placeholder="Message"
           value={form.message}
           onChange={handleChange}
           required
         />
         <div style={{margin: '0 auto', width: '150'}}>
-        <button type="submit" onClick={sendForm}>{form.buttonText}</button>
+          <button type="submit" onClick={sendForm}>{form.buttonText}</button>
         </div>
       </form>
 
@@ -79,9 +79,11 @@ export default function ContactForm() {
         border-radius: var(--radius);
         width: 80vw;
         height: 50px;
+        font-size: 16px;
         text-align: center;
-        border: 1px solid var(--grey);
+        border: 1px solid var(--white);
         margin: .5rem 0;
+        background: transparent;
       }
       form textarea {
           height: 150px;
@@ -89,33 +91,20 @@ export default function ContactForm() {
       }
       form input, form textarea, form button {
           font-family: inherit;
-          font-weight: 400;
-          color: var(--black);
+          color: var(--white);
           letter-spacing: inherit;
       }
       form input:focus, form textarea:focus {
-        box-shadow: var(--shadow);
       }
-      ::placeholder {
-          color: var(--black);
-          opacity: 1;
-      }
+			form label {
+					margin: 1rem 0 .1rem 0;
+			}
       form button {
-          min-width: 180px;
-          margin-top: 2rem;
-          background: transparent;
-          border: 1px solid var(--grey);
-          box-shadow: none;
-      }
-      form button:hover {
-          border: 1px solid var(--black);
-        }
-        .fe {
-          box-shadow: none;
-        }
-        .fechange {
-          background: var(--success);
-          font-size: 0;
+          background: var(--secondary);
+          color: var(--black);
+          padding: var(--btnpadding);
+          min-width: 150px;
+          margin: 2rem auto;
         }
       @media(min-width: 760px) {
           form input, form textarea {

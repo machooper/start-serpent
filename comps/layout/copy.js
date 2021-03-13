@@ -3,5 +3,5 @@ import config from '../../config'
 export default function Copy() {
 	const yr = new Date().getFullYear();
 	return (
-		<Link href="/"><a style={{color: 'inherit'}}>Produced by &copy; Adapt Studio {yr}</a></Link>
+		<Link href="/"><a style={{color: 'inherit', fontWeight: '300'}}>Produced by &copy; Adapt Studio {yr}</a></Link>
 )}

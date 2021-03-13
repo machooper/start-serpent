@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Layout from '../comps/layout/layout'
 import {getAllPosts} from '../lib/posts'
-import PostList from '../comps/blog/list'
+import PostList from '../comps/artists/list'
 
 export default function Blog({allPosts}) {
   return (
