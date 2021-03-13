@@ -24,10 +24,17 @@ export default function PostList({posts}) {
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+				width: 300px;
+				height: 400px;
+				background: grey;
+				position: relative;
 			}
 			.post img {
-				width: 100px;
-				height: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
 			}
 			`}</style>
 		</>

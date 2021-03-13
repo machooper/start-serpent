@@ -16,8 +16,7 @@ export async function getStaticProps() {
     'title',
     'image',
     'slug',
-    'author',
-    'excerpt'
+    'url'
   ])
   return {
     props: {allPosts}
