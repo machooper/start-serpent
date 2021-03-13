@@ -5,18 +5,18 @@ export default function PostList({posts}) {
 		<>
 			{posts.map((post, index) => {
 				return (
-				<div key={post.id} className="post">
-					<div>
-						<img src={post.image} alt={post.title}/>
-						<h3>
-							<Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-								<a>{post.title}</a>
-							</Link>
-						</h3>
+				<Link as={`/artist/${post.slug}`} href="/artist/[artist]">
+					<div key={post.id} className="post">
+						<div>
+							<img src={post.image} alt={post.title}/>
+							<h3>
+									<a>{post.title}</a>
+							</h3>
+						</div>
+						<p>{post.excerpt}</p>
 					</div>
-					<p>{post.excerpt}</p>
-				</div>
-			)})}
+				</Link>
+				)})}
 
 			<style jsx>{`
 			.post {

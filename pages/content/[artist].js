@@ -5,7 +5,7 @@ import {getPostBySlug, getAllPosts} from '../../lib/fetchposts'
 import md from '../../lib/md'
 import PostBody from '../../comps/blog/body'
 
-export default function Post(post) {
+export default function Artist(post) {
 	return (
 		<Layout title={`${post.post.title}`} description={post.post.excerpt}>
 			<Head>

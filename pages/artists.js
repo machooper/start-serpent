@@ -4,7 +4,6 @@ import {getAllPosts} from '../lib/posts'
 import PostList from '../comps/artists/list'
 
 export default function Blog({allPosts}) {
-  console.log(allPosts)
   return (
     <Layout title="Artists" description="A collection of artists managed by Star Serpent Records">
       <PostList posts={allPosts}/>
