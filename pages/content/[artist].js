@@ -6,6 +6,7 @@ import md from '../../lib/md'
 import PostBody from '../../comps/blog/body'
 
 export default function Artist(post) {
+	console.log(post);
 	return (
 		<Layout title={`${post.post.title}`} description={post.post.excerpt}>
 			<Head>

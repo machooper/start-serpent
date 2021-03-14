@@ -29,7 +29,7 @@ button {
     transition: .4s ease;
     color: inherit;
 }
-button:hover {background: var(--secondary);}
+button:hover {color: var(--primary); background: var(--secondary);}
 .container {
     width: 100vw;
     min-height: 82.2vh;

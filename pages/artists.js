@@ -14,8 +14,8 @@ export async function getStaticProps() {
   const allPosts = getAllPosts([
     'id',
     'title',
-    'image',
     'slug',
+    'image',
     'releases',
     'url'
   ])

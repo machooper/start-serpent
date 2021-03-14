@@ -13,7 +13,6 @@ export default function PostList({posts}) {
 									<a>{post.title}</a>
 							</h3>
 						</div>
-						<p>{post.excerpt}</p>
 					</div>
 				</Link>
 				)})}
