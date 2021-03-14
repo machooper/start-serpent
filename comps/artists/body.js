@@ -1,6 +1,6 @@
 import md from './md.module.css'
 
-export default function PostBody({content}) {
+export default function Body({content}) {
 	return (
 		<div 
 			className={md['md']}

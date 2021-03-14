@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-export default function PostList({posts}) {
+export default function List({posts}) {
 	return (
 		<>
 			{posts.map((post, index) => {
 				return (
-				<Link as={`/artist/${post.slug}`} href="/artist/[artist]">
+				<Link as={`/artists/${post.slug}`} href="/artists/[slug]">
 					<div key={post.id} className="post">
 						<div>
 							<img src={post.image} alt={post.title}/>
