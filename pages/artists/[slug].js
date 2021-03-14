@@ -17,8 +17,14 @@ export default function Post(post) {
                 <h1>{post.post.title}</h1>
                 <img src={post.post.artistImage} alt={post.post.title}/>
                 <Body content={post.post.content}/>
-                <Button url="/" text="Listen Now"/>
+                <Button url={`https://${post.post.url}`} text="Listen Now"/>
             </div>
+            {/*            <div className="releases">
+                <Link href={post.post.releases.oneu}>
+                    <img src={post.post.releases.one} alt={post.post.releases.one}/>
+                </Link>
+            </div>
+                */}
             <style jsx>{`
                 .container {
                     width: 90vw;
