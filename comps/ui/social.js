@@ -32,11 +32,9 @@ export default function Social() {
 				padding: 0 .6rem;
 				cursor: pointer;
 			}
-			img {
-				width: 40px;
-			}
 			#Facebook {
-				width: 20px
+				width: 20px;
+				height: 20px;
 			}
 			#light {display: flex;}
 			#dark {display: none;}

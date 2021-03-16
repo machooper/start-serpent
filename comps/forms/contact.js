@@ -72,8 +72,8 @@ export default function ContactForm() {
 
       <style jsx>{`
       form {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+       flex-direction: column;
       }
       form input, form textarea {
         border-radius: var(--radius);
@@ -96,7 +96,7 @@ export default function ContactForm() {
       }
       form input:focus, form textarea:focus {
       }
-			form label {
+			label {
 					margin: 1rem 0 .1rem 0;
 			}
       form button {

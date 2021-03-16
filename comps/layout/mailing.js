@@ -22,6 +22,7 @@ export default function Mailing() {
 					flex-direction: column;
 					align-items: center;
 					justify-content: space-between;
+					color: var(--white);
 				}
 				.info img {
 					width: 80%;
@@ -35,6 +36,7 @@ export default function Mailing() {
 					margin: 2rem 0 .1rem 0;
 				}
 				form input {
+					color: var(--white);
 					background: transparent;
 					border: 1px solid var(--white);
 				}

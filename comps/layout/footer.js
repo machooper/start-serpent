@@ -13,6 +13,7 @@ export default function Footer() {
       footer {
          width: 100vw;
          display: flex;
+         color: var(--white);
          flex-direction: column;
          align-items: center;
          background: var(--quaternary);
