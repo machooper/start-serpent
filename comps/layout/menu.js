@@ -38,9 +38,9 @@ export default function Menu() {
           align-items: center;
           position: absolute;
           top: 0;
-          right: ${menu ? '0' : '-140vw'};
+          right: 0;
+          width: ${menu ? '100vw' : '0vw'};
           background: var(--primary);
-          width: 100vw;
           transition: 0.3s ease;
           z-index: 1;
         }
@@ -53,6 +53,8 @@ export default function Menu() {
           right: 45px;
           font-size: 2.5rem;
           color: var(--white);
+          display: ${menu ? 'block':'none'};
+          text-decoration: none;
         }
         nav {
           display: flex;
@@ -63,6 +65,7 @@ export default function Menu() {
           display: flex;
           flex-direction: column;
           text-align: center;
+          display: ${menu ? 'block':'none'};
         }
         ul li {
           padding: 1rem 0;
