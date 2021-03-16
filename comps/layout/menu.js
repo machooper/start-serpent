@@ -38,7 +38,7 @@ export default function Menu() {
           align-items: center;
           position: absolute;
           top: 0;
-          right: ${menu ? '0' : '-120vw'};
+          right: ${menu ? '0' : '-140vw'};
           background: var(--primary);
           width: 100vw;
           transition: 0.3s ease;
