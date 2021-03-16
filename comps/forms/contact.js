@@ -81,7 +81,7 @@ export default function ContactForm() {
         height: 50px;
         font-size: 16px;
         text-align: center;
-        border: 1px solid var(--white);
+        border: 1px solid var(--black);
         margin: .5rem 0;
         background: transparent;
       }
@@ -106,6 +106,9 @@ export default function ContactForm() {
           min-width: 150px;
           margin: 2rem auto;
         }
+      @media(prefers-color-scheme: dark) {
+        border: 1px solid: var(--white);
+      }
       @media(min-width: 760px) {
           form input, form textarea {
               width: 450px;
