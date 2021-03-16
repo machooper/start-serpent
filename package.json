@@ -13,6 +13,7 @@
 		"react": "latest",
 		"react-dom": "latest",
 		"remark": "latest",
-		"remark-html": "latest"
+		"remark-html": "latest",
+		"nodemailer": "latest"
 	}
 }
