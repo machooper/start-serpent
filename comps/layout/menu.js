@@ -3,7 +3,6 @@ import Link from 'next/link'
 import config from '../../config'
 export default function Menu() {
   const [menu, setMenu] = useState(false);
-
   const menuToggle = () => {
     setMenu(!menu),
       [menu, setMenu]
@@ -39,9 +38,9 @@ export default function Menu() {
           align-items: center;
           position: absolute;
           top: 0;
-          right: 0;
+          right: ${menu ? '0' : '-100vw'};
           background: var(--primary);
-          transform: translate(${menu ? '0%' : '130%'});
+          width: 100vw;
           transition: 0.3s ease;
           z-index: 1;
         }
