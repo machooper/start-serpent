@@ -17,6 +17,6 @@ export default function PageHead({description, title}) {
       <meta property='twitter:image' content='/meta/og.png'/>
 			<link rel='icon' type='image/svg' href='/icons/fav.svg'/>
       <link rel="preconnect" href="https://fonts.gstatic.com"/> 
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" rel="preload" as="font"/>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" rel="preload" as="font" type="font/ttf" crossorigin/>
 		</Head>
 )}
