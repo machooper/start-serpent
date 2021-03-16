@@ -15,7 +15,11 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {font-family: var(--head); font-weight: var(--hWeight);}
-h1 {font-size: 1.6rem;}
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
 a {text-decoration: none; color:var(--primary);}
 a:hover {text-decoration: underline;}
 p {max-width: 90vw; line-height: 1.6; margin: 1rem 0;}
