@@ -34,7 +34,7 @@ export default function Social() {
 			}
 			#Facebook {
 				width: 20px;
-				height: 20px;
+				height: 40px;
 			}
 			#light {display: flex;}
 			#dark {display: none;}

@@ -107,7 +107,9 @@ export default function ContactForm() {
           margin: 2rem auto;
         }
       @media(prefers-color-scheme: dark) {
-        border: 1px solid var(--white);
+       form input {
+         border: 1px solid var(--white);
+       }
       }
       @media(min-width: 760px) {
           form input, form textarea {
