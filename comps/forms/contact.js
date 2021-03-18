@@ -88,6 +88,7 @@ export default function ContactForm() {
       form textarea {
           height: 150px;
           resize: none;
+          border: 1px solid var(--black);
       }
       form input, form textarea, form button {
           font-family: inherit;
@@ -107,7 +108,7 @@ export default function ContactForm() {
           margin: 2rem auto;
         }
       @media(prefers-color-scheme: dark) {
-       form input {
+       form input, form textarea {
          border: 1px solid var(--white);
        }
       }
