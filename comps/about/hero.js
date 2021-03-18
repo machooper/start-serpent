@@ -1,9 +1,10 @@
+import Title from '../ui/title'
 import content from '../../content/about.json'
 export default function Hero() {
 	return (
 		<>
 			<div className="hero">
-				<h1>{content.title}</h1>
+				<Title anchor="/" text={content.title}/>
 				<img src={content.img} alt={content.imgalt}/>
 				<p>{content.subheading}</p>
 			</div>

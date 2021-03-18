@@ -51,6 +51,7 @@ export default function List({posts}) {
 			}
 			@media(min-width: 760px) {
 				.artists {
+					width: 100vw;
 					display: flex;
 					flex-direction: row;
 					justify-content: center;
