@@ -42,6 +42,11 @@ export default function List({posts}) {
 				width: 100%;
 				height: 100%;
 			}
+			@media(min-width: 410px) {
+				.post {
+					height: 435px
+				}
+			}
 			`}</style>
 		</>
 )}
