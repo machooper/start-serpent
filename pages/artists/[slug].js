@@ -15,16 +15,14 @@ export default function Post(post) {
             </Head>
             <div className="container">
                 <h1>{post.post.title}</h1>
-                <img src={post.post.artistImage} alt={post.post.title}/>
-                <Body content={post.post.content}/>
-                <Button url={`https://${post.post.url}`} text="Listen Now"/>
+                <div className="content">
+                    <img id="hero" src={post.post.artistImage} alt={post.post.title}/>
+                    <div className="text">
+                      <Body content={post.post.content}/>
+                      <Button url={`https://${post.post.url}`} text="Listen Now"/>
+                    </div>
+                </div>
             </div>
-            {/*            <div className="releases">
-                <Link href={post.post.releases.oneu}>
-                    <img src={post.post.releases.one} alt={post.post.releases.one}/>
-                </Link>
-            </div>
-                */}
             <style jsx>{`
                 .container {
                     width: 90vw;
@@ -42,13 +40,8 @@ export default function Post(post) {
                     width: 100%;
                 }
                 @media(min-width: 1020px) {
-                    .container img {
-                        width: 700px;
-                        height: 400px;
-                        margin: 1rem 0;
-                    }
-                    .container {
-                        width: 700px;
+                    #hero {
+                        width: 300px;
                     }
                 }
                 @media(min-width: 3000px) {

@@ -2,18 +2,20 @@ import content from '../../content/footer.json'
 export default function Mailing() {
 	return (
 		<>
-			<div className="info">
-				<h1>{content.title}</h1>
-				<span>{content.span}</span>
-				<img src="/icons/light/logo2.png" alt="Start Serpent Full Logo"/>
+			<div className="container">
+				<div className="info">
+					<h1>{content.title}</h1>
+					<span>{content.span}</span>
+					<img src="/icons/light/logo2.png" alt="Start Serpent Full Logo"/>
+				</div>
+				<form>
+					<label>Full Name</label>
+					<input type="text" name="name"/>
+					<label>E-Mail Address</label>
+					<input type="email" name="email"/>
+					<button type="submit">Submit</button>
+				</form>
 			</div>
-			<form>
-				<label>Full Name</label>
-				<input type="text" name="name"/>
-				<label>E-Mail Address</label>
-				<input type="email" name="email"/>
-				<button type="submit">Submit</button>
-			</form>
 
 			<style jsx>{`
 				.info {
@@ -48,6 +50,12 @@ export default function Mailing() {
 					min-width: 150px;
 					margin: 2rem auto;
 				}
+				@media(min-width: 760px) {
+					.container {
+						min-height: auto;
+						display: flex;
+						justify-content: space-evenly;
+					}
 			`}</style>
 		</>
 )}
