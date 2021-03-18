@@ -35,6 +35,9 @@ export default function About() {
 					text-align: left;
 				}
 				@media(min-width: 760px) {
+					.container {
+						min-height: auto;
+					}
 					b {
 						display: none;
 					}
