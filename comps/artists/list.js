@@ -3,19 +3,21 @@ import Link from 'next/link'
 export default function List({posts}) {
 	return (
 		<>
-			{posts.map((post, index) => {
-				return (
-				<Link as={`/artists/${post.slug}`} href="/artists/[slug]">
-					<div key={post.id} className="post">
-						<div>
-							<img src={post.image} alt={post.title}/>
-							<h3>
+			<div className="artists">
+				{posts.map((post, index) => {
+					return (
+					<Link as={`/artists/${post.slug}`} href="/artists/[slug]">
+						<div key={post.id} className="post">
+							<div>
+								<img src={post.image} alt={post.title}/>
+								<h3>
 									<a>{post.title}</a>
-							</h3>
+								</h3>
+							</div>
 						</div>
-					</div>
-				</Link>
-				)})}
+					</Link>
+					)})}
+			</div>
 
 			<style jsx>{`
 			.post {
@@ -32,7 +34,7 @@ export default function List({posts}) {
 				margin: 1rem 0;
 			}
 			.post:hover {
-				transform: translate(10px, -10px) scale(1.04);
+				transform: translate(7px, -10px) scale(1.04);
 				transition: .3s ease;
 			}
 			.post img {
@@ -45,6 +47,17 @@ export default function List({posts}) {
 			@media(min-width: 410px) {
 				.post {
 					height: 435px
+				}
+			}
+			@media(min-width: 760px) {
+				.artists {
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+				}
+				.post {
+					width: 300px;	
+					margin: 0 .6rem;
 				}
 			}
 			`}</style>
