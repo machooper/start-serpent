@@ -36,6 +36,7 @@ export default function Mailing() {
 					margin: 2rem 0 .1rem 0;
 				}
 				form input {
+					max-width: 90vw;
 					color: var(--white);
 					background: transparent;
 					border: 1px solid var(--white);

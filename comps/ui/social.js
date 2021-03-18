@@ -26,6 +26,7 @@ export default function Social() {
 			<style jsx>{`
 			ul {
 				align-items: center;
+				margin: 2rem 0;
 			}
 			li {
 				margin: 5px;

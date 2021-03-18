@@ -23,7 +23,7 @@ export default function List({posts}) {
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				width: 300px;
+				width: 85vw;
 				height: 400px;
 				background: grey;
 				position: relative;
