@@ -39,6 +39,11 @@ export default function Post(post) {
                 .container img {
                     width: 100%;
                 }
+                @media(min-width: 760px) {
+                    .container img {
+                        width: 400px;
+                    }    
+                }
                 @media(min-width: 1020px) {
                     #hero {
                         width: 300px;

@@ -26,6 +26,16 @@
   .md h2,
   .md h3,
   .md p {
+    width: 500px;
+    max-width: 500px;
+  }
+}
+@media(min-width: 1000px) {
+  .md,
+  .md h1,
+  .md h2,
+  .md h3,
+  .md p {
     width: 400px;
     max-width: 400px;
   }
