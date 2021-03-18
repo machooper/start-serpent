@@ -53,11 +53,12 @@ export default function List({posts}) {
 				.artists {
 					display: flex;
 					flex-direction: row;
+					justify-content: center;
 					flex-wrap: wrap;
 				}
 				.post {
 					width: 300px;	
-					margin: 0 .6rem;
+					margin: .6rem .6rem;
 				}
 			}
 			`}</style>
