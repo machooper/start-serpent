@@ -90,6 +90,8 @@ export default function Menu() {
 		      svg rect {
 		  	    fill: var(--white);
 	        }
+        }
+        @media(min-width: 760px) {
           #menu {
             background: transparent;
           }
@@ -101,7 +103,6 @@ export default function Menu() {
             padding: 0 1rem;
           }
         }
-    
       `}</style>
     </>
   );
