@@ -36,8 +36,8 @@
   .md h2,
   .md h3,
   .md p {
-    width: 400px;
-    max-width: 400px;
+    width: 650px;
+    max-width: 650px;
   }
 }
 @media(min-width: 3000px) {

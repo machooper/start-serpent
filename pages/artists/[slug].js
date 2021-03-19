@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link';
 import {getPostBySlug, getAllPosts} from '../../lib/posts'
 import md from '../../lib/md'
+import releases from '../../content/releases.json'
 import Layout from '../../comps/layout/layout'
 import Body from '../../comps/artists/body'
 import Button from '../../comps/ui/button'
@@ -21,6 +22,14 @@ export default function Post(post) {
                       <Body content={post.post.content}/>
                       <Button url={`https://${post.post.url}`} text="Listen Now"/>
                     </div>
+                </div>
+                <div className="releases">
+                	<h1 className="title">Latest Releases</h1>
+                	<div className="list">
+                		<a href="https://soundcloud.com">
+                        <img src="/images/03.png" alt="The Last Sociables New Release"/>
+                		</a>
+                	</div>
                 </div>
             </div>
             <style jsx>{`
@@ -43,10 +52,24 @@ export default function Post(post) {
                     .container img {
                         width: 400px;
                     }    
+                    .releases {
+                        margin-top: 2rem;
+                    }
+                    .releases .list img {
+                        width: 300px;
+                    }
                 }
                 @media(min-width: 1020px) {
                     #hero {
-                        width: 300px;
+                        width: 450px;
+                    }
+                    .content {
+                        width: 90vw;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        align-items: flex-start;
+                        padding-top: 1rem;
                     }
                 }
                 @media(min-width: 3000px) {
