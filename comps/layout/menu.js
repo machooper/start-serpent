@@ -30,7 +30,6 @@ export default function Menu() {
       </nav>
       <style jsx>{`
         #menu {
-          width: 100vw;
           min-height: 100vh;
 	        position: absolute;
           display: flex;
@@ -77,28 +76,32 @@ export default function Menu() {
         svg rect {
           fill: var(--black);
         }
-	@media(prefers-color-scheme: dark) {
-		svg rect {
-			fill: var(--white);
-		}
-	}
-        @media(min-width: 1360px) {
+        @media(min-width: 760px) {
+          #menubtn {
+            display: none;
+          }
           #menu {
-            width: 500px;
+            width:  auto;
             min-height: auto;
-            transform: translate(0);
-            background: transparent;
             position: relative;
           }
+        }  
+	      @media(prefers-color-scheme: dark) {
+		      svg rect {
+		  	    fill: var(--white);
+	        }
+          #menu {
+            background: transparent;
+          }
           ul {
+            display: flex;
             flex-direction: row;
           }
-          ul li a {
+          ul li {
             padding: 0 1rem;
           }
-          #menubtn {padding: 1rem 0; display: none;}
-          #close {display: none;}
         }
+    
       `}</style>
     </>
   );
