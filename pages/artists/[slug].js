@@ -8,7 +8,6 @@ import Body from '../../comps/artists/body'
 import Button from '../../comps/ui/button'
 
 export default function Post(post) {
-    console.log(post.post.releases);
     return (
         <Layout title={`${post.post.title}`} description={post.post.excerpt}>
             <Head>
