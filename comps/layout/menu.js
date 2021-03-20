@@ -31,7 +31,7 @@ export default function Menu() {
       <style jsx>{`
         #menu {
           min-height: 100vh;
-	  position: absolute;
+      	  position: absolute;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -102,9 +102,9 @@ export default function Menu() {
           ul li {
             padding: 0 1rem;
           }
-	  ul li a {
-	    font-size: var(--size);
-	  }
+      	  ul li a {
+	          font-size: var(--size);
+	        }
         }
       `}</style>
     </>
