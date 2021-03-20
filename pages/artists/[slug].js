@@ -54,10 +54,15 @@ export default function Post(post) {
                 .container img {
                     width: 100%;
                 }
-                @media(min-width: 760px) {
+                @media(min-width: 600px) {
                     .container img {
                         width: 400px;
                     }    
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
                     .releases {
                         margin-top: 2rem;
                     }
