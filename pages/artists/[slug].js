@@ -8,6 +8,7 @@ import Body from '../../comps/artists/body'
 import Button from '../../comps/ui/button'
 
 export default function Post(post) {
+    console.log(post.post.releases);
     return (
         <Layout title={`${post.post.title}`} description={post.post.excerpt}>
             <Head>
@@ -26,9 +27,14 @@ export default function Post(post) {
                 <div className="releases">
                 	<h1 className="title">Latest Releases</h1>
                 	<div className="list">
-                		<a href="https://soundcloud.com">
-                        <img src="/images/03.png" alt="The Last Sociables New Release"/>
-                		</a>
+                      {post.post.releases.map((release, index) => {
+                          return (
+                              <div key={release.id}>
+                                  <Link href={release.link}>
+                                      <img src={release.img} alt={post.post.title}/>
+                                    </Link>
+                                </div>
+                          )})}
                 	</div>
                 </div>
             </div>
@@ -87,7 +93,7 @@ export default function Post(post) {
     )
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({params}) {
     const post = getPostBySlug(params.slug, [
         'id',
         'title',
@@ -97,6 +103,7 @@ export async function getStaticProps({ params }) {
         'releases',
         'url',
         'slug',
+        'releases',
         'content'
     ])
     const content = await md(post.content || '')

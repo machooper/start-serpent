@@ -49,7 +49,7 @@ export default function List({posts}) {
 					height: 435px
 				}
 			}
-			@media(min-width: 760px) {
+			@media(min-width: 600px) {
 				.artists {
 					width: 100vw;
 					display: flex;
