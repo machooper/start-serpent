@@ -90,6 +90,20 @@ export default function Post(post) {
                         padding-top: 1rem;
                     }
                 }
+                @media(min-width: 1600px) {
+                    .content {
+                        justify-content: center;
+                    }
+                    #hero {
+                        width: 400px;
+                        margin-right: 4rem;
+                    }
+                    .text {
+                        justify-content: space-around;
+                        align-items: flex-start;
+                        height: 430px;
+                    }
+                }
                 @media(min-width: 3000px) {
                     .container img {
                         width: 1400px;
