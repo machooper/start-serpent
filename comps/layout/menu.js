@@ -80,6 +80,9 @@ export default function Menu() {
           #menubtn {
             display: none;
           }
+          #close {
+            display: none;
+          }
           #menu {
             width:  auto;
             min-height: auto;

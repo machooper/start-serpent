@@ -10,10 +10,10 @@
 	"dependencies": {
 		"gray-matter": "latest",
 		"next": "latest",
+		"nodemailer": "latest",
 		"react": "latest",
 		"react-dom": "latest",
 		"remark": "latest",
-		"remark-html": "latest",
-		"nodemailer": "latest"
+		"remark-html": "latest"
 	}
 }
