@@ -6,8 +6,7 @@ export default function Button({ghost, text, url, bg, hov}) {
 				<button>
 					{text}
 				</button>
-			</Link>
-			
+			</Link>	
 			<style jsx>{`
 			button {
 				background: ${ghost ?	 'transparent' : 'var(--primary)'};

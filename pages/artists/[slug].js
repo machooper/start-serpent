@@ -63,7 +63,15 @@ export default function Post(post) {
                         align-items: center;
                     }
                     .releases {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
                         margin-top: 2rem;
+                    }
+                    .releases .list {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                     .releases .list img {
                         width: 300px;
