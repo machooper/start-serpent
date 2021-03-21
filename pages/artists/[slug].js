@@ -79,7 +79,7 @@ export default function Post(post) {
                 }
                 @media(min-width: 1020px) {
                     #hero {
-                        width: 450px;
+                        width: 300px;
                     }
                     .content {
                         width: 90vw;
