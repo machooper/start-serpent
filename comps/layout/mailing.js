@@ -37,6 +37,8 @@ export default function Mailing() {
 					margin-bottom: 2rem;
 				}
 				form label {
+					display: flex;
+					flex-direction: column;
 					margin: 2rem 0 .1rem 0;
 				}
 				form input {
