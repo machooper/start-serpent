@@ -53,15 +53,15 @@ export default function Post(post) {
                 .container img {
                     width: 100%;
                 }
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+               }
                 @media(min-width: 600px) {
                     .container img {
                         width: 400px;
                     }    
-                    .text {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
                     .releases {
                         display: flex;
                         flex-direction: column;
