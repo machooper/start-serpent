@@ -3,5 +3,5 @@ import config from '../../config'
 export default function Copy() {
 	const yr = new Date().getFullYear();
 	return (
-		<Link href="/"><p style={{fontWeight: '300'}}>Produced by &copy; <span>Adapt Studio</span> {yr}</p></Link>
+		<p>Produced by &copy; <Link href="https://adaptstudio.co.uk">Adapt Studio</Link> {yr}</p>
 )}
