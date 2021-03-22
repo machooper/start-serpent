@@ -21,7 +21,7 @@ export default function Menu() {
         <ul>
           {config.navigation.map((link) => (
             <li key={link}>
-              <Link href={link}>
+              <Link href={`/${link}`}>
                 <a onClick={menuToggle}>{link.charAt(0).toUpperCase() + link.slice(1)}</a>
               </Link>
             </li>
