@@ -19,6 +19,14 @@ export default function Footer() {
          background: var(--quaternary);
          padding: 2rem 0 .5rem 0;
       }
+      @media only screen 
+        and (device-width: 375px) 
+        and (device-height: 812px) 
+        and (-webkit-device-pixel-ratio: 3)
+        and (orientation : landscape) {
+          width: 100vw;
+          margin: 0;
+      }
       @media(min-width: 760px) {
         footer {
          justify-content: space-between;
