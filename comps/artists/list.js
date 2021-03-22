@@ -33,10 +33,6 @@ export default function List({posts}) {
 				transition: .3s ease;
 				margin: 1rem 0;
 			}
-			.post:hover {
-				transform: translate(7px, -10px) scale(1.04);
-				transition: .3s ease;
-			}
 			.post img {
 				position: absolute;
 				top: 0;
@@ -60,6 +56,10 @@ export default function List({posts}) {
 				.post {
 					width: 300px;	
 					margin: .6rem .6rem;
+				}
+				.post:hover {
+					transform: translate(7px, -10px) scale(1.04);
+					transition: .3s ease;
 				}
 			}
 			`}</style>
