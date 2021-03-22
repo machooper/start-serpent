@@ -34,6 +34,11 @@ export default function About() {
 				p {
 					text-align: left;
 				}
+				@media(min-width: 500px) {
+					.container {
+						min-height: auto;
+					}
+				}
 				@media(min-width: 760px) {
 					.container {
 						min-height: auto;
