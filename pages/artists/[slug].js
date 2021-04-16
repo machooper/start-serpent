@@ -1,42 +1,51 @@
 import Head from 'next/head'
-import Link from 'next/link';
-import {getPostBySlug, getAllPosts} from '../../lib/posts'
-import md from '../../lib/md'
-import releases from '../../content/releases.json'
+import Link from 'next/link'
+import groq from 'groq'
+import imageUrlBuilder from '@sanity/image-url'
+import BlockContent from '@sanity/block-content-to-react'
+import client from '../../client'
 import Layout from '../../comps/layout/layout'
 import Body from '../../comps/artists/body'
 import Button from '../../comps/ui/button'
 
-export default function Post(post) {
+function urlFor(source) {
+	return imageUrlBuilder(client).image(source)
+}
+
+export default function Artist(props) {
+    const {
+      title = 'Missing Title',
+      releases,
+      body,
+      mainImage
+    } = props
+
     return (
-        <Layout title={`${post.post.title}`} description={post.post.excerpt}>
+        <Layout title="blog" description="">
             <Head>
-                <meta property='og:image' content={post.post.image} />
-                <meta property='twitter:image' content={post.post.image} />
+                <meta property='og:image' content={props.mainImage} />
+                <meta property='twitter:image' content={props.mainImage} />
             </Head>
             <div className="container">
-                <h1>{post.post.title}</h1>
+	    	    <h1>{props.title}</h1>
                 <div className="content">
-                    <img id="hero" src={post.post.artistImage} alt={post.post.title}/>
+                    <img 
+	    		id="hero" 
+	    		src={urlFor(mainImage)
+			.url()}
+	    	    />
+
                     <div className="text">
-                      <Body content={post.post.content}/>
-                      <Button url={`https://${post.post.url}`} text="Listen Now"/>
-                    </div>
-                </div>
-                <div className="releases">
-                	<h1 className="title">Latest Releases</h1>
-                	<div className="list">
-                      {post.post.releases.map((release, index) => {
-                          return (
-                              <div key={release.id}>
-                                  <Link href={release.link}>
-                                      <img src={release.img} alt={post.post.title}/>
-                                    </Link>
-                                </div>
-                          )})}
-                	</div>
-                </div>
-            </div>
+	    	      <BlockContent 
+	    		blocks={props.body}
+	    		imageOptions={{w:320, fit: 'max'}}
+	    		{...client.config()}
+	    	    />
+	    			
+                      <Button url={props.listen} text="Listen Now"/>
+	    </div>
+	    </div>
+	    </div>
             <style jsx>{`
                 .container {
                     width: 90vw;
@@ -61,6 +70,7 @@ export default function Post(post) {
                 @media(min-width: 600px) {
                     .container img {
                         width: 400px;
+			margin: 0 auto;
                     }    
                     .releases {
                         display: flex;
@@ -73,6 +83,10 @@ export default function Post(post) {
                         justify-content: center;
                         align-items: center;
                     }
+                    .releases .list img div {
+                        width: 300px;
+			cursor: pointer;
+			}
                     .releases .list img {
                         width: 300px;
                     }
@@ -86,6 +100,19 @@ export default function Post(post) {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-evenly;
+			align-items: flex-start;
+                        padding-top: 1rem;
+                    }
+		    .text {
+		    	max-width: 600px;
+			margin-left: 2rem;
+		}
+                }
+		@media(min-width: 1360px) {
+			.text {
+				max-width: 700px;
+				}
+				}
                         align-items: flex-start;
                         padding-top: 1rem;
                     }
@@ -96,11 +123,14 @@ export default function Post(post) {
                     }
                     #hero {
                         width: 400px;
+                        margin-right: 4rem8
                         margin-right: 4rem;
                     }
                     .text {
                         justify-content: space-around;
                         align-items: flex-start;
+			max-width: 900px;
+			margin-left: 2rem;
                         height: 430px;
                     }
                 }
@@ -116,45 +146,17 @@ export default function Post(post) {
                 }
             `}</style>
         </Layout>
-    )
-}
+)}
 
-export async function getStaticProps({params}) {
-    const post = getPostBySlug(params.slug, [
-        'id',
-        'title',
-        'date',
-        'artistImage',
-        'image',
-        'releases',
-        'url',
-        'slug',
-        'releases',
-        'content'
-    ])
-    const content = await md(post.content || '')
+const query = groq`*[_type == "artist" && slug.current == $slug][0]{
+  title,
+  mainImage,
+  body,
+  listen,
+  "releases": releases[]->
+}`
 
-    return {
-        props: {
-            post: {
-                ...post,
-                content,
-            },
-        },
-    }
-}
-
-export async function getStaticPaths() {
-    const posts = getAllPosts(['slug'])
-
-    return {
-        paths: posts.map((post) => {
-            return {
-                params: {
-                    slug: post.slug,
-                },
-            }
-        }),
-        fallback: false,
-    }
+Artist.getInitialProps = async function (context) {
+  const {slug = ""} = context.query
+  return await client.fetch(query, {slug}) 
 }

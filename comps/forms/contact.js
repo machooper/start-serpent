@@ -36,7 +36,7 @@ export default function ContactForm() {
   return (
   <>
     <form>
-        <label for="name">Full Name</label>
+        <label htmlFor="name">Full Name</label>
         <input
           id="name"
           name="name"
@@ -46,7 +46,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
         />
-        <label for="E-Mail Address">E-Mail Address</label>
+        <label htmlFor="E-Mail Address">E-Mail Address</label>
         <input
           id="email"
           name="email"
@@ -56,7 +56,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
         />
-        <label for="Message">Message</label>
+        <label htmlFor="Message">Message</label>
         <textarea
           id="message"
           name="message"
