@@ -7,7 +7,6 @@ import Title from '../comps/ui/title'
 import List from '../comps/artists/list'
 export default function Artists(props) {
 	const {artists = []} = props
-	console.log(artists)
 	function urlFor (source) {
   return imageUrlBuilder(client).image(source)
 }
