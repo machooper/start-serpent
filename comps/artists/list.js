@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function List({posts}) {
+export default function List({artists}) {
 	return (
 		<>
 			<div className="artists">

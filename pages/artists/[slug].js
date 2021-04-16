@@ -29,8 +29,8 @@ export default function Artist(props) {
                 <meta property='twitter:image' content={props.mainImage} />
             </Head>
             <div className="container">
-                <div className="content">
 	    	    <h1>{props.title}</h1>
+                <div className="content">
                     <img 
 	    		id="hero" 
 	    		src={urlFor(mainImage)
@@ -116,28 +116,37 @@ export default function Artist(props) {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-evenly;
-                        align-items: flex-start;
+			align-items: flex-start;
                         padding-top: 1rem;
                     }
+		    .text {
+		    	max-width: 600px;
+			margin-left: 2rem;
+		}
                 }
+		@media(min-width: 1360px) {
+			.text {
+				max-width: 700px;
+				}
+				}
                 @media(min-width: 1600px) {
                     .content {
                         justify-content: center;
                     }
                     #hero {
                         width: 400px;
-                        margin-right: 4rem;
+                        margin-right: 4rem8
                     }
                     .text {
                         justify-content: space-around;
                         align-items: flex-start;
-                        height: 430px;
+			max-width: 900px;
+			margin-left: 2rem;
                     }
                 }
                 @media(min-width: 3000px) {
                     .container img {
                         width: 1400px;
-                        height: 800px;
                         margin: 1rem 0;
                     }
                     .container {
