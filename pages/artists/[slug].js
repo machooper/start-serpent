@@ -1,33 +1,68 @@
-import {useRouter} from 'next/router'
 import Head from 'next/head'
-import Link from 'next/link';
+import Link from 'next/link'
+import groq from 'groq'
+import imageUrlBuilder from '@sanity/image-url'
+import BlockContent from '@sanity/block-content-to-react'
+import client from '../../client'
 import releases from '../../content/releases.json'
 import Layout from '../../comps/layout/layout'
 import Body from '../../comps/artists/body'
 import Button from '../../comps/ui/button'
 
-export default function Artist(post) {
-    const router = useRouter()
+function urlFor(source) {
+	return imageUrlBuilder(client).image(source)
+}
+
+export default function Artist(props) {
+	console.log(props)
+    const {
+      title = 'Missing Title',
+      releases,
+      body,
+      mainImage
+    } = props
 
     return (
         <Layout title="blog" description="">
             <Head>
-                <meta property='og:image' content="" />
-                <meta property='twitter:image' content="" />
+                <meta property='og:image' content={props.mainImage} />
+                <meta property='twitter:image' content={props.mainImage} />
             </Head>
             <div className="container">
-                <h1>{router.query.slug}</h1>
                 <div className="content">
-                    <img id="hero" src="" alt=""/>
+	    	    <h1>{props.title}</h1>
+                    <img 
+	    		id="hero" 
+	    		src={urlFor(mainImage)
+			.url()}
+	    	    />
+
                     <div className="text">
-                      <Body content=""/>
-                      <Button url={`https://$""`} text="Listen Now"/>
+	    	      <BlockContent 
+	    		blocks={props.body}
+	    		imageOptions={{w:320, fit: 'max'}}
+	    		{...client.config()}
+	    	    />
+	    			
+                      <Button url={props.listen} text="Listen Now"/>
                     </div>
                 </div>
                 <div className="releases">
-                <h1>{router.query.slug}</h1>
                 	<h1 className="title">Latest Releases</h1>
                 	<div className="list">
+	    		{props.releases.map(release => {
+				let relimg = release.image
+				return (
+				  <div key={release._id}>
+				   <Link href={release.url}>
+				    <img 
+					src={urlFor(relimg)
+					.url()} 
+					style={{cursor: 'pointer'}}
+					alt={`${release.title} image`}/>
+					</Link>
+		         		</div>
+				)})}
                 	</div>
                 </div>
             </div>
@@ -67,8 +102,9 @@ export default function Artist(post) {
                         justify-content: center;
                         align-items: center;
                     }
-                    .releases .list img {
+                    .releases .list img div {
                         width: 300px;
+			cursor: pointer;
                     }
                 }
                 @media(min-width: 1020px) {
@@ -110,5 +146,16 @@ export default function Artist(post) {
                 }
             `}</style>
         </Layout>
-    )
+)}
+
+const query = groq`*[_type == "artist" && slug.current == $slug][0]{
+  title,
+  mainImage,
+  body,
+  listen,
+  "releases": releases[]->
+}`
+Artist.getInitialProps = async function (context) {
+	const {slug = ""} = context.query
+	return await client.fetch(query, {slug})
 }
