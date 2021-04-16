@@ -36,7 +36,11 @@ export default function ContactForm() {
   return (
   <>
     <form>
+<<<<<<< HEAD
         <label htmlFor="name">Full Name</label>
+=======
+        <label for="name">Full Name</label>
+>>>>>>> 3767c0b17f41bbce9fb09eacc02a4981b0f3b9a3
         <input
           id="name"
           name="name"
@@ -46,7 +50,11 @@ export default function ContactForm() {
           onChange={handleChange}
           required
         />
+<<<<<<< HEAD
         <label htmlFor="E-Mail Address">E-Mail Address</label>
+=======
+        <label for="E-Mail Address">E-Mail Address</label>
+>>>>>>> 3767c0b17f41bbce9fb09eacc02a4981b0f3b9a3
         <input
           id="email"
           name="email"
@@ -56,7 +64,11 @@ export default function ContactForm() {
           onChange={handleChange}
           required
         />
+<<<<<<< HEAD
         <label htmlFor="Message">Message</label>
+=======
+        <label for="Message">Message</label>
+>>>>>>> 3767c0b17f41bbce9fb09eacc02a4981b0f3b9a3
         <textarea
           id="message"
           name="message"

@@ -8,11 +8,15 @@
 		"start": "next start"
 	},
 	"dependencies": {
+<<<<<<< HEAD
 		"@sanity/block-content-to-react": "^2.0.7",
 		"@sanity/client": "^2.8.0",
 		"@sanity/image-url": "^0.140.22",
 		"gray-matter": "latest",
 		"groq": "^2.2.6",
+=======
+		"gray-matter": "latest",
+>>>>>>> 3767c0b17f41bbce9fb09eacc02a4981b0f3b9a3
 		"next": "latest",
 		"nodemailer": "latest",
 		"react": "latest",

@@ -1,9 +1,29 @@
 import Link from 'next/link'
 
+<<<<<<< HEAD
 export default function List({artists}) {
 	return (
 		<>
 			<div className="artists">
+=======
+export default function List({posts}) {
+	return (
+		<>
+			<div className="artists">
+				{posts.map((post, index) => {
+					return (
+					<Link as={`/artists/${post.slug}`} href="/artists/[slug]">
+						<div key={post.id} className="post">
+							<div>
+								<img src={post.image} alt={post.title}/>
+								<h3>
+									<a>{post.title}</a>
+								</h3>
+							</div>
+						</div>
+					</Link>
+					)})}
+>>>>>>> 3767c0b17f41bbce9fb09eacc02a4981b0f3b9a3
 			</div>
 
 			<style jsx>{`
