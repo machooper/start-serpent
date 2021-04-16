@@ -9,17 +9,10 @@ export default function Mailing() {
 					<img src="/icons/light/logo2.png" alt="Start Serpent Full Logo"/>
 				</div>
 				<form>
-<<<<<<< HEAD
 					<label htmlFor="name">Full Name
 						<input type="text" name="name"/>
 					</label>
 					<label htmlFor="email">E-Mail Address
-=======
-					<label for="name">Full Name
-						<input type="text" name="name"/>
-					</label>
-					<label for="email">E-Mail Address
->>>>>>> 3767c0b17f41bbce9fb09eacc02a4981b0f3b9a3
 						<input type="email" name="email"/>
 					</label>
 					<button type="submit">Submit</button>

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-<<<<<<< HEAD
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import client from '../client'
@@ -79,38 +78,12 @@ export default function Artists(props) {
 				}
 			}
 			`}</style>
-=======
-import Layout from '../comps/layout/layout'
-import {getAllPosts} from '../lib/posts'
-import Title from '../comps/ui/title'
-import List from '../comps/artists/list'
-export default function Blog({allPosts}) {
-  return (
-    <Layout title="Blog" description="A collection of stories, opinions and tutorials by Mac Hooper">
-      <Title anchor="/artists" text="Artists"/>
-	    <List posts={allPosts}/>
->>>>>>> 3767c0b17f41bbce9fb09eacc02a4981b0f3b9a3
     </Layout>
   )
 }
 
-<<<<<<< HEAD
 Artists.getInitialProps = async () => ({
     artists: await client.fetch(groq`
       *[_type == "artist"]
     `)
 })
-=======
-export async function getStaticProps() {
-  const allPosts = getAllPosts([
-    'id',
-    'title',
-    'date',
-    'slug',
-    'image',
-  ])
-  return {
-    props: {allPosts}
-  }
-}
->>>>>>> 3767c0b17f41bbce9fb09eacc02a4981b0f3b9a3
